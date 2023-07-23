@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-contact me here
-=======
-this file if for contact
->>>>>>> feature/BI_40_git_Vipul
