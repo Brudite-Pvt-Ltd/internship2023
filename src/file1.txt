@@ -1,3 +1,7 @@
 this is file1 and i am creating it for the first time for src
 modified content
+<<<<<<< HEAD
 change in file1.txt in master branch 
+=======
+change in file1.txt 
+>>>>>>> feature/B1_41_git_Ankita
