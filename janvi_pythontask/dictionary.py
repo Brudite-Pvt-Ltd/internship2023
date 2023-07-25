@@ -48,8 +48,17 @@ del dict["model"]
 print(dict) 
 
 
+#TO GET ALL THE VALUES
+x=dict.values()
+print(x)
 
+#TO COPY DICTIONARY ITEMS
+dict2=dict.copy()
+print(dict2)
 
+#TO CHECK IF KEY IS PRESENT
+if "age" in dict:
+    print("YES, age is present")
 
 
 

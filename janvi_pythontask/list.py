@@ -23,9 +23,12 @@ list = ["janvi","lakshita","faisal"]
 list.append("siri")
 print(list)
 
-list = [1,2,3,]
-list2 = [4,5,6]
-t = (list,list2)
-print(t)
-set = {2,2,3,4,5}
-set(0)
+#To determine if a specified item is present in a list
+if "janvi" in list:
+    print("Yes, 'janvi' is in the list")
+
+    #To clear the list
+mylist=["apple","mango","cherry"]
+print(mylist)
+mylist.clear()
+print(mylist)
