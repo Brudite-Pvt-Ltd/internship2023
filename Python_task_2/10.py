@@ -7,5 +7,6 @@ ans = []
 for x in array1:
     if x in array2:
         ans.append(x)
+        array2.remove(x)
         
 print(ans)
