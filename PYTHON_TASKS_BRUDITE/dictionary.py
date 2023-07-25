@@ -34,3 +34,14 @@ print(mydict)
 mydict.pop("age")
 print(mydict)
 
+#TO CLEAR DICTIONARY
+mydict.clear()
+print(mydict)
+
+#TO UPDATE ANY KEY IN A DICTIONARY
+mydict.update({"age": 15})
+
+#TO COPY DICTIONARY ITEMS
+dict2=mydict.copy()
+print(dict2)
+
