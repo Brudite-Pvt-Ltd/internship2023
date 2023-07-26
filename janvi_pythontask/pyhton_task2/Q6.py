@@ -1,6 +1,11 @@
 #6. Implement a function to check if an array is a palindrome (reads the same forwards and backwards)
-string=input("Enter string:")
-if(string==string[::-1]):
-   print("The string is a palindrome")
+def isPalindrome(a):
+    return a == a[::-1]
+ 
+a= [1,2,3,4,1]
+output= isPalindrome(a)
+ 
+if output:
+    print("Yes")
 else:
-   print("The string isn't a palindrome")
+    print("No")
