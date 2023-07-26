@@ -35,3 +35,14 @@ mylist=["apple","mango","cherry"]
 print(mylist)
 mylist.clear()
 print(mylist)
+
+#TO REVERSE ITEMS OF LIST
+mylist.reverse()
+print(mylist)
+
+#TO COPY ITEMS OF A LIST
+mylist.copy()
+
+#TO SORT A LIST
+mylist.sort()
+print(mylist)
