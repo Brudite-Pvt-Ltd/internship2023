@@ -11,7 +11,7 @@ print(list[1:3])
 #change item value.
 list = ["janvi","lakshita","faisal"]
 list[2] = "shivi"
-print(list)
+print(list
 
 #Insert Items
 list = ["janvi","lakshita","faisal"]
@@ -32,3 +32,11 @@ mylist=["apple","mango","cherry"]
 print(mylist)
 mylist.clear()
 print(mylist)
+#add b to a
+a=[47,'apple','mango',59]
+b=[1,5,'banana']
+a.extend(b) # add the  items of list 2 to list 1
+print(a)
+#find occurance of number
+m=[1,9,4,4,7,4,4]
+print(m.count(4))

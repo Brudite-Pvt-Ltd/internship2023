@@ -60,6 +60,10 @@ print(dict2)
 if "age" in dict:
     print("YES, age is present")
 
+#get() - it will return the value of the specified key
+dict = dict.get("year")
+print (dict)
+
 
 
 
