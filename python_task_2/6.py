@@ -3,7 +3,7 @@
 def isPalindrome(ank):
     return ank == ank[::-1]
  
-ank = "45454"
+ank = [1,2,3,4,5]
 output= isPalindrome(ank)
  
 if output:
