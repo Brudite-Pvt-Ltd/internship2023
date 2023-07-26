@@ -37,8 +37,7 @@ list = ['flag ', 'resister', 'ips', 'pin', 'lines']
 print(list.index('ips'))
 
 
-# use len() tpo find length of list
-list = [10, 20, 30,40,50 ,55,60,80]
-n = len(list)
-print("The length of list is: ", n)
-
+# use of .clear()
+lis = [1, 2, 3]
+lis.clear()
+print(lis)
