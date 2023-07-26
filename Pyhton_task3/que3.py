@@ -16,7 +16,7 @@ def sorting(l):
                 l[j] =temp
             
 #list
-l = [[9,5,7],[1,5,8],[7,9,8],[1,5,2]]
+l = [[9,5,7],[9,5,8],[7,9,8],[1,5,2]]
 
 
 #empty lists
@@ -28,12 +28,5 @@ for x in l:
      sorting(x)
      l1.append(x)
 print(l1)  
-
-
-#method second 
-for x in l:
-     x[::-1]
-     l2.append(x)
-print(l2)   
 
      
