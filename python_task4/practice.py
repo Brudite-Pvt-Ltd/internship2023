@@ -48,6 +48,13 @@ print(list_of_expmore5 )'''
 print(list_of_pin302012)'''
 
 #Q4Find list of all the emails of employeee with  Company domian name emails .
+
+
+update_email = list(filter(lambda emp: (emp[0], [emp[1][0], emp[1][1], emp[1][2].replace("@", "@company"), emp[1][3], emp[1][4]])))
+candidate_with_company_emails = list(map(update_email , candidate))
+print(candidate_with_company_emails )
+
+
 #Q5.Add a Base Salary as 10k for managers, 20k for software engineers, 5k developers, 12k for team lead.
 
 l1 = [x[1].append(2000) or x[1] for x in candidate]
