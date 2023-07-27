@@ -37,6 +37,6 @@ a=[47,'apple','mango',59]
 b=[1,5,'banana']
 a.extend(b) # add the  items of list 2 to list 1
 print(a)
-#find occurance of number
+#find occurance of number 
 m=[1,9,4,4,7,4,4]
 print(m.count(4))
