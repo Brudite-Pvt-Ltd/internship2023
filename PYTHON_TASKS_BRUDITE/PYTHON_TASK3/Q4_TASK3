@@ -1,8 +1,15 @@
 # Q4. Search all the elements 
 # from a list of list
 
-class car:
-   def print(self,name,age):
-       print(self)
-       self.name= name
-       self.age=age
+l1 = [[10, 25, 36, 14],[5, 13, 44, 21],[6, 9, 23, 43]]
+counter = 0
+a = int(input("Enter the number:"))
+for i in l1:
+    for j in i:
+        if j==a:
+            counter += 1
+if counter == 0:
+    print("Found")
+else:
+    print("NOT FOUND")
+    
