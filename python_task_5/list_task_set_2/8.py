@@ -1,1 +1,0 @@
-#8.Find the maximum product of three elements in a list.

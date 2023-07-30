@@ -1,1 +1,0 @@
-#9.Create a function that takes a string as input and returns the most common character and its frequency using a dictionary.

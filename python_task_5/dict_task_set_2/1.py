@@ -1,1 +1,0 @@
-#1.Create a dictionary of students and their scores, find and print the student with the highest score

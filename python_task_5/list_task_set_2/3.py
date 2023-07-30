@@ -1,1 +1,0 @@
-# 3.Find the frequency of each element in a list and store it in a dictionary.

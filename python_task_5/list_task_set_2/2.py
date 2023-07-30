@@ -1,1 +1,0 @@
-# 2.Find the length of a list without using the len() function.

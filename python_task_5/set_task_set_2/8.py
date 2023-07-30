@@ -1,1 +1,0 @@
-# 8.Write a function to find the nth smallest element in a set.

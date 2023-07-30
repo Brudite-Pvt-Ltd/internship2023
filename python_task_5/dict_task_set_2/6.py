@@ -1,1 +1,0 @@
-#6.Create a function that takes a dictionary and returns a new dictionary where the keys and values are swapped.

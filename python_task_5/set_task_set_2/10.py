@@ -1,1 +1,0 @@
-#10.Create a set of numbers ,find all pairs of elements whose sum is a prime number.
