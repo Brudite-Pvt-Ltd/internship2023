@@ -27,7 +27,7 @@ candidate = [
     ]
 
 #Q1.Find list of all manager ,software engineers, team leader and assoiated developer ?
-'''list_of_manager = list(filter((lambda x: x[1][0] == "Manager"),candidate))
+list_of_manager = list(filter((lambda x: x[1][0] == "Manager"),candidate))
 list_of_Software  = list(filter((lambda x: x[1][0] == "Software Engineer"),candidate))
 list_of_Teamleader = list(filter((lambda x: x[1][0] == "Team Lead"),candidate))
 list_of_Associteddev = list(filter((lambda x: x[1][0] == "Associate Developer"),candidate))
@@ -35,29 +35,104 @@ list_of_Associteddev = list(filter((lambda x: x[1][0] == "Associate Developer"),
 print(list_of_manager)
 print(list_of_Software)
 print(list_of_Teamleader)
-print(list_of_Associteddev)'''
+print(list_of_Associteddev)
 
 #Q2.find list of all members having experince more then 5 yr. ?
 
-'''list_of_expmore5 = list(filter((lambda x: x[1][1] > 5),candidate))
-print(list_of_expmore5 )'''
+list_of_expmore5 = list(filter((lambda x: x[1][1] > 5),candidate))
+print(list_of_expmore5 )
 
 #Q3.Find list of all the candidates with pan = 302012?
 
-'''list_of_pin302012 = list(filter((lambda x: x[1][3] == "302012"),candidate))
-print(list_of_pin302012)'''
+list_of_pin302012 = list(filter((lambda x: x[1][3] == "302012"),candidate))
+print(list_of_pin302012)
 
 #Q4Find list of all the emails of employeee with  Company domian name emails .
 
 
-update_email = list(filter(lambda emp: (emp[0], [emp[1][0], emp[1][1], emp[1][2].replace("@", "@company"), emp[1][3], emp[1][4]])))
-candidate_with_company_emails = list(map(update_email , candidate))
-print(candidate_with_company_emails )
-
+e = list(map((lambda x: ".company@".join(x[1][2].split('@')) ), candidate))
+for i in range(0,len(candidate)):
+    candidate[i][1][2]=e[i]
+print(candidate)
 
 #Q5.Add a Base Salary as 10k for managers, 20k for software engineers, 5k developers, 12k for team lead.
 
-l1 = [x[1].append(2000) or x[1] for x in candidate]
-print(l1)
+basic_salary = [10000 if x[1][0] == "Manager" else 20000 if x[1][0] == "Software Engineer" else 5000 if x[1][0] == "Associate Developer" else 12000 if x[1][0] == "Team Lead" else 0 for x in candidate]
+print(basic_salary)
+
+me = [x[1].append(10000) or x for x in list_of_manager ]
+print(me)
+se = [x[1].append(20000) or x for x in list_of_Software ]
+print(se)
+ad = [x[1].append(5000) or x for x in list_of_Associteddev ]
+print(ad)
+tl = [x[1].append(12000) or x for x in list_of_Teamleader]
+print(tl)
+
+#Q6.Find the Highest Salary in all Designations
+
+Mang_list = list(filter((lambda x:x[1][0]=="Manager"),candidate))
+
+Se_list = list(filter((lambda x:x[1][0]=="Software Engineer"),candidate)) 
+
+Associate_list = list(filter((lambda x:x[1][0]=="Associate Developer"),candidate))
+
+Team_list = list(filter((lambda x:x[1][0]=="Team Lead"),candidate))
+
+list1=[x[1].append(10000) or  x[1] for x in Mang_list] 
+
+list2=[x[1].append(20000) or  x[1] for x in Se_list] 
+
+list3=[x[1].append(5000) or  x[1] for x in Associate_list]
+
+list4=[x[1].append(12000) or  x[1] for x in Team_list]  
+
+from functools import reduce
+
+max_sal = reduce(lambda x, y : x if x[1][5] > y[1][5] else y  , candidate)
+print(max_sal[1][5])
+print(max_sal[1][0])
+
+#Q7.Find the Aggregate of salaries of Managers, Software Engineers, Team Lead and Associate Developer.
+
+Mang_list = list(filter((lambda x:x[1][0]=="Manager"),candidate))
+
+Se_list = list(filter((lambda x:x[1][0]=="Software Engineer"),candidate)) 
+
+Associate_list = list(filter((lambda x:x[1][0]=="Associate Developer"),candidate))
+
+Team_list = list(filter((lambda x:x[1][0]=="Team Lead"),candidate))
+
+list1=[x[1].append(10000) or  x[1] for x in Mang_list] 
+
+list2=[x[1].append(20000) or  x[1] for x in Se_list] 
+
+list3=[x[1].append(5000) or  x[1] for x in Associate_list]
+
+list4=[x[1].append(12000) or  x[1] for x in Team_list]  
+
+print("Aggregate salary of Manager =",(len(Mang_list)*10000))
+print("Aggregate salary of Software Engg =",(len(Se_list)*20000))
+print("Aggregate salary of Team Lead =",(len(Team_list)*12000))
+print("Aggregate salary of Associate Developer =",(len(Associate_list)*5000))
 
 
+#Q8. Find all the employees with pincode near by in range +-10.
+#means -> if the input is 302015 then range upto 302005 to 302025 will be filtered.
+ 
+pin = 302012
+pin_range = list(filter(lambda x:((int(x[1][3]) > pin - 10) and (int(x[1][3]) < pin + 10)),candidate))
+print(pin_range)
+
+
+#Q9.Create a Dictionary with Tuple as Key and List[1] as value.
+
+
+dict = { x[0] : x[1] for x in candidate }
+print(dict)
+
+
+#Q10.Create a Contact Directory where people can search phone numbers through name or ID.
+
+contact = [([i[0][0],i[0][1],i[1][4]]) for i in candidate]
+print(contact)
