@@ -2,6 +2,7 @@
 
 set1 ={1,2,3,4}
 
+<<<<<<< HEAD
 
 power_set = set()
 
@@ -21,3 +22,10 @@ def get_power_set(i, l, sub_set, power_set):
 
 get_power_set(0, temp_set_list, [], power_set)
 print("Using Brute force : ", power_set)  
+=======
+for i in range(len(set1)):
+    tempset ={}
+    for j in range(i,len(set1)):
+        
+    
+>>>>>>> 65a2121563f275f9f600f730e4bcee05a24e56fe
