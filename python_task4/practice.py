@@ -134,5 +134,17 @@ print(dict)
 
 #Q10.Create a Contact Directory where people can search phone numbers through name or ID.
 
-contact = [([i[0][0],i[0][1],i[1][4]]) for i in candidate]
-print(contact)
+target_name = ""
+target_id = (input("enter emp_id : "))
+if(target_id != ''):
+    target = int(target_id)    
+    matched_data =  list(filter( lambda x : x != None ,list(map(lambda x : [x[0][0], x[0][1], x[1][4]] if x[0][0] == target else None , candidate))))
+    print(matched_data)
+else :
+    target_name = input("enter emp_name : ")
+    if(target_name != ''):
+        matched_data = list(filter(lambda x: x!=None ,list(map(lambda x : [x[0][0], x[0][1], x[1][4]] if str(x[0][1]).__contains__(target_name) == True else None , candidate )))) 
+        for x in matched_data:
+            print(x)
+    else:
+        print("Please enter id or name")
