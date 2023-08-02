@@ -1,4 +1,17 @@
 # Q6.Remove the duplicate tuples from the list of tuple.
-list = [(8,9),(3,5),(8,9),(2,3)]
+l = [ (1, 2, 3), (1, 2, 3), (1, 3, 2), (1, 2, 4)]
 
-print(set(list))
+# if (1, 2) and (2, 1) are diffreent 
+
+print(list(set(l)))
+
+new_l = []
+have = []
+
+for x in l :
+    tup = sorted(list(x));
+    if tup not in have :
+        new_l.append(x)  ;
+        have.append(tup) ;
+        
+print(new_l)
