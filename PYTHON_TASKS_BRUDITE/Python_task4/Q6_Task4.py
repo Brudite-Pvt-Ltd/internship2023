@@ -36,10 +36,8 @@ print(l3)
 l4=[x[1].append("12000") or  x[1] for x in lead_list]
 print(l4)
 
-# importing reduce
-from functools import reduce
 
-# using reduce to find the maximum salary in all 
-max_salary = reduce(lambda x, y : x if x[1][5] > y[1][5] else y  , candidate)
-print("max_salary  : ", max_salary[1][5])
-print("Designation : ", max_salary[1][0])
+#que6 find the height salry in all desitnation
+from functools import reduce
+heighest_salary =reduce(lambda x,y : max(x,y),list(map(lambda x:x[1][5] ,candidate)))
+print(heighest_salary)
