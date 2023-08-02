@@ -6,5 +6,5 @@ def palindrome_dict(d):
             new_dict[key] = value
     return new_dict
 
-d = {'navan' : 1 , 'pop' : 2 , 'preet' : 3}
+d = {'kanak' : 1 , 'pop' : 2 , 'preet' : 3}
 print(palindrome_dict(d))

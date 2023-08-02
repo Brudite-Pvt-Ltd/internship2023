@@ -6,12 +6,12 @@ l = [ (1, 2, 3), (1, 2, 3), (1, 3, 2), (1, 2, 4)]
 print(list(set(l)))
 
 new_l = []
-have = []
+l2 = []
 
 for x in l :
-    tup = sorted(list(x));
-    if tup not in have :
-        new_l.append(x)  ;
-        have.append(tup) ;
+    tup = sorted(list(x))
+    if tup not in l2 :
+        new_l.append(x)  
+        l2.append(tup) 
         
 print(new_l)

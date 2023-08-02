@@ -18,7 +18,7 @@ for i in range(0, n):
         temp.append(l[j][i])
     
     # sorting it in reverse order
-    temp.sort(reverse=True);
+    temp.sort(reverse=True)
     for x in range(0, n):
         new_l[x].append(temp[x])
 

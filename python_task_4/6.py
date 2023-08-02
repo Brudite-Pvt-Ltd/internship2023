@@ -63,8 +63,6 @@ def update(x):
 adding_salary = list( map(lambda x : x[1].append(update(x)) or x  , candidate) )
 
 
-### part 2
-
 # importing reduce
 from functools import reduce
 
