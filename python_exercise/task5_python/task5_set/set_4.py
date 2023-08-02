@@ -1,11 +1,7 @@
 # Remove the maximum element from a set without using the max() function
-laksh1={1,2,3,4}
-
-largest_number = None
-
-for number in laksh1:
-    if largest_number is None or largest_number < number:
-        largest_number = number
-
-#  get the largest number
-print(largest_number)  
+set = {1,2,3,4,7,5,9,4}
+set1 = sorted(set)
+print(set1)
+maximum_element= set1[-1]
+set1.remove(maximum_element)
+print(set1)
