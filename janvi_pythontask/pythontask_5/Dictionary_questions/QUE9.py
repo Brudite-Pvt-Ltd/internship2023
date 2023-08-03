@@ -2,8 +2,8 @@
 def sort_by_value_length(input_list):
     return sorted(input_list, key=lambda x: len(x))
 
-# Example list
-my_list = ['apple', 'banana', 'cherry', 'orange', 'grapes']
+
+my_list = ['apple', 'kiwi', 'cherry', 'orange', 'grapes']
 
 
 sorted_list = sort_by_value_length(my_list)
