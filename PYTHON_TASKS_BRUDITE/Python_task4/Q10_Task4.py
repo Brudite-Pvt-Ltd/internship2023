@@ -23,5 +23,24 @@ candidate = [
         ["Associate Developer", 8, "Janvi@gmail.com", "302016", "9879876723"]]
 ]
 
-contact_directory = [([x[0][0],x[0][1],x[1][4]]) for x in candidate]
-print(contact_directory)
+n=input("enter the name or id : ")    
+contact_directory={(x[0][0] , x[0][1]):x[1][4] for x in candidate}
+
+for x, y in contact_directory.items():
+    if(n.isdigit()):
+        if(int(n) == x[0] ):
+            print(x[0], x[1], y)
+            b = 0 
+            break;
+        else:
+            b = 1
+    else:
+        if(n == x[1]):
+            print(x[0], x[1], y)
+            b = 0
+            break;
+        else:
+            b = 1
+
+if(b):
+    print("NOT Found")
