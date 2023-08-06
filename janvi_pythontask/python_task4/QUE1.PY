@@ -39,7 +39,7 @@ Question 9: Create a Dictionary with Tuple as Key and List[1] as value.
 Question 10: Create a Contact Directory where people 
 can search phone numbers through name or ID.
  '''
-managers = list(filter(lambda x:x[1][0]=="Manager",candidate))
+''''managers = list(filter(lambda x:x[1][0]=="Manager",candidate))
 print(managers)
 SoftwareEngineer = list(filter(lambda x:x[1][0]=="Software Engineer",candidate))
 print(SoftwareEngineer)
@@ -71,7 +71,7 @@ print(candidate_with_company_emails )
 '''#question 5 : adding a base salary'''
 
 
-def update(i):
+'''def update(i):
   if i[1][0] == "Manager":
         return int(10000)
   elif i[1][0] == 'Associate Developer':
@@ -123,9 +123,41 @@ for x in emp:
 
 dic = {x[0] : x[1] for x in candidate}
 for key, val in dic.items() :
-    print( key , " : ", val)
+    print( key , " : ", val)'''
     
 #Que10 create a contact Directory where people can search phone numbers through name  or ID.
-contact_directory = [([x[0][0],x[0][1],x[1][4]]) for x in candidate]
-print(contact_directory)
-    
+'''def create_contact_directory(candidate_list):
+    return {str(candidate[0][0]): candidate[0][2] for candidate in candidate_list}
+
+def search_contact(contact_directory, search_query):
+    return contact_directory.get(str(search_query).lower(), "Contact not found.")
+'''
+
+'''search_query = "Rahul"
+result = search_contact(create_contact_directory, search_query)
+print(f"Phone number for '{search_query}': {result}")
+
+search_query = 2002
+result = search_contact(create_contact_directory, search_query)
+print(f"Phone number for ID '{search_query}': {result}")'''
+n=input("enter the name or id : ")
+contact_directory={(x[0][0] , x[0][1]):x[1][4] for x in candidate}
+
+for x, y in contact_directory.items():
+    if(n.isdigit()):
+        if(int(n) == x[0] ):
+            print(x[0], x[1], y)
+            b = 0 
+            break;
+        else:
+            b = 1
+    else:
+        if(n == x[1]):
+            print(x[0], x[1], y)
+            b = 0
+            break;
+        else:
+            b = 1
+
+if(b):
+    print("NOT Found")
