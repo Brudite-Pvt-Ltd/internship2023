@@ -138,3 +138,18 @@ x[1][4] picks number'''
 
 contact = [([i[0][0],i[0][1],i[1][4]]) for i in candidate]
 print(contact)
+
+def get_info_by_id(id_number):
+    for person_data in contact:
+        if person_data[0] == id_number:
+            return person_data[1], person_data[2]
+    return None, None
+
+def get_info_by_name(name):
+    for person_data in contact:
+        if person_data[1] == name:
+            return person_data[0], person_data[2]
+    return None, None
+
+print(get_info_by_id(2001))
+print(get_info_by_name("Lakshita"))
