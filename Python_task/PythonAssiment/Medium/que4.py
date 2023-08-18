@@ -8,7 +8,7 @@ Sample Output: arr after rotation = [4, 5, 1, 2, 3]
 arr = [1, 2, 3, 4, 5]
 D = 2
 
-for i in range(0,D+1):
+for i in range(0,len(arr)-D):
     arr.append(arr[0])
     arr.pop(0)
     
