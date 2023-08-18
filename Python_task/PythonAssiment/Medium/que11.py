@@ -12,5 +12,5 @@ Output:
 l=['Red', 'Blue', 'Black', 'White', 'Pink']
 
 for i in range(len(l)):
-    l[i] = list(l[i])
+    l[i] = list(map(lambda x: x,l[i]))  
 print(l)
